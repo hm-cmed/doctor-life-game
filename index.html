@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>白衣キャリアロード</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="app-header">
+    <div>
+      <h1>白衣キャリアロード</h1>
+      <p class="subtitle">医師の人生を疑似体験するシミュレーションゲーム（開発中プロトタイプ）</p>
+    </div>
+    <button id="restart-button" class="btn btn-small" type="button">はじめからやり直す</button>
+  </header>
+
+  <div id="resume-banner" hidden>
+    <p>前回の続きのデータがあります。続きから始めますか？</p>
+    <div class="resume-actions">
+      <button id="resume-yes" class="btn btn-primary btn-small" type="button">続きから始める</button>
+      <button id="resume-no" class="btn btn-small" type="button">はじめから始める</button>
+    </div>
+  </div>
+
+  <div class="shell">
+    <aside id="stats-panel" class="panel">
+      <h2>ステータス</h2>
+      <div id="stats-list"></div>
+      <div class="happiness-line">
+        <span>幸福度（複合指標）</span>
+        <strong id="happiness-value">0</strong>
+      </div>
+    </aside>
+
+    <main id="game-screen" class="panel">
+      <p class="age-line" id="age-value-line"><span id="age-value">0</span>歳</p>
+      <h2 id="stage-title"></h2>
+      <p id="intro-text"></p>
+
+      <div id="choices-area"></div>
+      <div id="result-area" hidden></div>
+
+      <div id="log-panel">
+        <h3>これまでの歩み</h3>
+        <ul id="log-list"></ul>
+      </div>
+    </main>
+
+    <section id="ending-screen" hidden></section>
+  </div>
+
+  <script src="data/params.js"></script>
+  <script src="data/stages.js"></script>
+  <script src="data/endings.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
