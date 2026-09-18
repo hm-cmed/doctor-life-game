@@ -1,0 +1,6 @@
+{
+  "name": "白衣キャリアロード",
+  "description": "ボードゲーム「人生ゲーム」を忠実に再現した医師人生シミュレーション（マルチプレイヤー対応）",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
